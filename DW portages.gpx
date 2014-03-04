@@ -1,0 +1,246 @@
+<?xml version="1.00000"?>
+<gpx version="1.00000" creator="Viking -- http://viking.sf.net/"
+xmlns:xsi="http://www.w3.org/2001.00000/XMLSchema-instance"
+xmlns="http://www.topografix.com/GPX/1.00000"
+xsi:schemaLocation="http://www.topografix.com/GPX/1.00000 http://www.topografix.com/GPX/1.00000/gpx.xsd">
+<wpt lat="51.36503" lon="-1.71642">
+  <name>portage 01 - R - Wootton Bottom lock</name>
+</wpt>
+<wpt lat="51.36721" lon="-1.71171">
+  <name>portage 02 - R - Heathey Close lock</name>
+</wpt>
+<wpt lat="51.36937" lon="-1.70083">
+  <name>portage 03 - R - Brimslade lock</name>
+</wpt>
+<wpt lat="51.36956" lon="-1.69717">
+  <name>portage 04 - R - Wootton Top (Cadley) lock</name>
+</wpt>
+<wpt lat="51.35910" lon="-1.64438">
+  <name>portage 05 - R - Crofton lock</name>
+</wpt>
+<wpt lat="51.35882" lon="-1.64054">
+  <name>portage 06 - R - Crofton lock</name>
+</wpt>
+<wpt lat="51.35840" lon="-1.63598">
+  <name>portage 07 - R - Crofton lock</name>
+</wpt>
+<wpt lat="51.35761" lon="-1.63203">
+  <name>portage 08 - R - Crofton lock</name>
+</wpt>
+<wpt lat="51.35748" lon="-1.62830">
+  <name>portage 09 - R - Crofton lock</name>
+</wpt>
+<wpt lat="51.35854" lon="-1.62498">
+  <name>portage 10 - R - Crofton lock</name>
+</wpt>
+<wpt lat="51.36052" lon="-1.62229">
+  <name>portage 11 - R - Crofton lock</name>
+</wpt>
+<wpt lat="51.36472" lon="-1.61573">
+  <name>portage 12 - R - Crofton lock</name>
+</wpt>
+<wpt lat="51.36600" lon="-1.61383">
+  <name>portage 13 - R - Crofton lock</name>
+</wpt>
+<wpt lat="51.36725" lon="-1.61150">
+  <name>portage 14 - R - Crofton Bottom lock</name>
+</wpt>
+<wpt lat="51.37546" lon="-1.60182">
+  <name>portage 15 - R - Bedwyn Church lock</name>
+</wpt>
+<wpt lat="51.38226" lon="-1.59446">
+  <name>portage 16 - R - Burnt Mill lock</name>
+</wpt>
+<wpt lat="51.38750" lon="-1.58688">
+  <name>portage 17 - R - Potters lock</name>
+</wpt>
+<wpt lat="51.39189" lon="-1.58379">
+  <name>portage 18 - R - Little Bedwyn lok</name>
+</wpt>
+<wpt lat="51.40249" lon="-1.57112">
+  <name>portage 19 - R - Oakhill Down lock</name>
+</wpt>
+<wpt lat="51.40482" lon="-1.56862">
+  <name>portage 20 - R - Froxfield Middle lock</name>
+</wpt>
+<wpt lat="51.40736" lon="-1.56564">
+  <name>portage 21 - R - Froxfield Lower lock</name>
+</wpt>
+<wpt lat="51.41102" lon="-1.54832">
+  <name>portage 22 - R - Picketfield lock</name>
+</wpt>
+<wpt lat="51.41403" lon="-1.53945">
+  <name>portage 23 - R - Cobbler&apos;s lock</name>
+</wpt>
+<wpt lat="51.41484" lon="-1.53252">
+  <name>portage 24 - R - Hungerford Marsh lock</name>
+</wpt>
+<wpt lat="51.41686" lon="-1.51815">
+  <name>portage 25 - L - Hungerford lock</name>
+</wpt>
+<wpt lat="51.41171" lon="-1.49622">
+  <name>portage 26 - R - Dunmill lock</name>
+</wpt>
+<wpt lat="51.41046" lon="-1.48014">
+  <name>portage 27 - L - Wire lock</name>
+</wpt>
+<wpt lat="51.40598" lon="-1.46771">
+  <name>portage 28 - L - Brunsden lock</name>
+</wpt>
+<wpt lat="51.40210" lon="-1.44708">
+  <name>portage 29 - L - Kintbury lock</name>
+</wpt>
+<wpt lat="51.40285" lon="-1.41175">
+  <name>portage 30 - L - Dreweat&apos;s lock</name>
+</wpt>
+<wpt lat="51.40080" lon="-1.40207">
+  <name>portage 31 - L - Copse lock</name>
+</wpt>
+<wpt lat="51.40089" lon="-1.39279">
+  <name>portage 32 - L - Hamstead lock</name>
+</wpt>
+<wpt lat="51.39640" lon="-1.37017">
+  <name>portage 33 - L - Benham lock</name>
+</wpt>
+<wpt lat="51.39801" lon="-1.35800">
+  <name>portage 34 - L - Higg&apos;s lock</name>
+</wpt>
+<wpt lat="51.39938" lon="-1.34764">
+  <name>portage 35 - L (cross bridge) - Guyer&apos;s lock</name>
+</wpt>
+<wpt lat="51.40099" lon="-1.32792">
+  <name>portage 36 - R - West mills swing bridge (compulsory)</name>
+</wpt>
+<wpt lat="51.40146" lon="-1.32554">
+  <name>portage 37 - L - Newbury lock</name>
+</wpt>
+<wpt lat="51.40301" lon="-1.31241">
+  <name>portage 38 - L - Greenham lock</name>
+</wpt>
+<wpt lat="51.40224" lon="-1.30132">
+  <name>portage 39 - R - Ham lock</name>
+</wpt>
+<wpt lat="51.39720" lon="-1.28529">
+  <name>portage 40 - L/R - Bull&apos;s lock</name>
+</wpt>
+<wpt lat="51.39327" lon="-1.27146">
+  <name>portage 41 - L - Widmead lock</name>
+</wpt>
+<wpt lat="51.39257" lon="-1.24825">
+  <name>portage 42 - L - Monkey Marsh lock</name>
+</wpt>
+<wpt lat="51.39363" lon="-1.22659">
+  <name>portage 43 - R - Colthrop lock</name>
+</wpt>
+<wpt lat="51.39283" lon="-1.20984">
+  <name>portage 44 - L - Midgham lock</name>
+</wpt>
+<wpt lat="51.39329" lon="-1.19404">
+  <name>portage 45 - L - Old Heale&apos;s lock</name>
+</wpt>
+<wpt lat="51.39538" lon="-1.18032">
+  <name>portage 46 - R - Old Woolhampton lock</name>
+</wpt>
+<wpt lat="51.40014" lon="-1.13782">
+  <name>portage 47 - R - Aldermaston wharf lock</name>
+</wpt>
+<wpt lat="51.40067" lon="-1.13058">
+  <name>portage 48 - L - Padworth lock</name>
+</wpt>
+<wpt lat="51.40747" lon="-1.12447">
+  <name>portage 49 - L - Towney lock</name>
+</wpt>
+<wpt lat="51.41843" lon="-1.10070">
+  <name>portage 50 - R - Tyle Mill lock</name>
+</wpt>
+<wpt lat="51.42462" lon="-1.08501">
+  <name>portage 51 - R - Sulhamstead lock</name>
+</wpt>
+<wpt lat="51.43082" lon="-1.06904">
+  <name>portage 52 - R - Sheffield lock</name>
+</wpt>
+<wpt lat="51.43189" lon="-1.05822">
+  <name>portage 53 - L/R - Garston lock</name>
+</wpt>
+<wpt lat="51.43323" lon="-1.03257">
+  <name>portage 54 - L - Burghfield lock</name>
+</wpt>
+<wpt lat="51.43598" lon="-1.00472">
+  <name>portage 55 - R - Southcote lock</name>
+</wpt>
+<wpt lat="51.43447" lon="-0.98671">
+  <name>portage 56 - R - Fobney lock</name>
+</wpt>
+<wpt lat="51.45087" lon="-0.97391">
+  <name>portage 57 - R (NA) - County weir lock</name>
+</wpt>
+<wpt lat="51.45598" lon="-0.95532">
+  <name>portage 58 - R (NA) - Blake&apos;s weir lock</name>
+</wpt>
+<wpt lat="51.46000" lon="-0.94299">
+  <name>portage 59 - R - Dreadnought reach (check point)</name>
+</wpt>
+<wpt lat="51.47278" lon="-0.91833">
+  <name>portage 60 - R (NA) - Sonning lock</name>
+</wpt>
+<wpt lat="51.50158" lon="-0.88335">
+  <name>portage 61 - R (NA) - Shiplake lock</name>
+</wpt>
+<wpt lat="51.52891" lon="-0.88551">
+  <name>portage 62 - L, in mill stream - Marsh lock (check point)</name>
+</wpt>
+<wpt lat="51.56037" lon="-0.87384">
+  <name>portage 63 - R - Hambledon lock</name>
+</wpt>
+<wpt lat="51.55073" lon="-0.81071">
+  <name>portage 64 - L - Hurley lock</name>
+</wpt>
+<wpt lat="51.55201" lon="-0.79447">
+  <name>portage 65 - L (NA) - Temple lock</name>
+</wpt>
+<wpt lat="51.56748" lon="-0.76918">
+  <name>portage 66 - L - Marlow lock</name>
+</wpt>
+<wpt lat="51.56139" lon="-0.69543">
+  <name>portage 67 - L - Cookham lock</name>
+</wpt>
+<wpt lat="51.53571" lon="-0.69872">
+  <name>portage 68 - L - Boulters lock island</name>
+</wpt>
+<wpt lat="51.50985" lon="-0.69047">
+  <name>portage 69 - L - Bray lock (check point)</name>
+</wpt>
+<wpt lat="51.49089" lon="-0.64158">
+  <name>portage 70 - R (NA) - Boveney lock</name>
+</wpt>
+<wpt lat="51.49107" lon="-0.60441">
+  <name>portage 71 - L - Romney lock</name>
+</wpt>
+<wpt lat="51.46381" lon="-0.56908">
+  <name>portage 72 - L - Old Windsor lock (check point)</name>
+</wpt>
+<wpt lat="51.43861" lon="-0.53874">
+  <name>portage 73 - R - Bell weir lock</name>
+</wpt>
+<wpt lat="51.41502" lon="-0.50105">
+  <name>portage 74 - L - Penton Hook lock</name>
+</wpt>
+<wpt lat="51.39119" lon="-0.48616">
+  <name>portage 75 - L, in flood: R - Chertsey weir lock</name>
+</wpt>
+<wpt lat="51.38195" lon="-0.45917">
+  <name>portage 76 - R - Shepperton lock</name>
+</wpt>
+<wpt lat="51.40515" lon="-0.40685">
+  <name>portage 77 - L - Sunbury lock</name>
+</wpt>
+<wpt lat="51.40518" lon="-0.34649">
+  <name>portage 78 - L - Molesey lock</name>
+</wpt>
+<wpt lat="51.43094" lon="-0.32299">
+  <name>portage 79 - L - Teddington lock (check point)</name>
+</wpt>
+<wpt lat="51.50066" lon="-0.12045">
+  <name>portage 80 - R - finish</name>
+</wpt>
+</gpx>
