@@ -1,0 +1,13 @@
+This version was tested on a Samsung GT-B2710
+
+Keypad auto-locking needs to be disabled:
+    Menu -> Settings -> Phone -> Keypad auto-lock -> Off
+
+In order to still lock the keypad, the program must be able to run in
+the background. Enable this by dialing *#7092463*#:
+    Module Settings -> Java -> VM Settings -> MVM Settings ->
+      MVM user End Key Option -> Hide only
+
+Recipients and locks can be specified as a comma and/or space separated
+list. An editor pops up when you press and hold the `#' key while in a
+text field.

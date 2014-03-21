@@ -1,0 +1,9 @@
+MIDlet-1: Menu,,nl.joukewitteveen.dwhere.Menu
+MIDlet-Jar-URL: DWhere.jar
+MicroEdition-Configuration: CLDC-1.1
+MIDlet-Version: 0.2
+MIDlet-Name: DWhere
+MIDlet-Vendor: Jouke Witteveen
+MIDlet-Permissions: javax.microedition.io.Connector.sms,javax.wireless.messaging.sms.send,javax.microedition.location.Location
+MicroEdition-Profile: MIDP-2.1
+MVM-Pause-Background: false 
