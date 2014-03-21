@@ -1,5 +1,5 @@
 MIDlet-1: Menu,,nl.joukewitteveen.dwhere.Menu
-MIDlet-Jar-Size: 22006
+MIDlet-Jar-Size: 22126
 MIDlet-Jar-URL: DWhere.jar
 MIDlet-Name: DWhere
 MIDlet-Permissions: javax.microedition.io.Connector.sms,javax.wireless.messaging.sms.send,javax.microedition.location.Location

@@ -24,6 +24,7 @@ public class Menu extends MIDlet implements ItemStateListener, CommandListener {
 		locks    = new TextField("Locks",    null, 225, TextField.ANY);
 
 		recipients.setString("+44");
+		locks.setString("1 5 13 14 19 21 22 24 25 28 31 35 40 41 42 44 45 48 49 50 52 54 57 58 60 61 62 64 65 66 67 69 70 72 73 74 75 76 77");
 		menu.append(recipients);
 		menu.append(trigger);
 		menu.append(delay);
