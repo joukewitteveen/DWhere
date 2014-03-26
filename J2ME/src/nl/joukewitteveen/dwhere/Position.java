@@ -4,7 +4,7 @@ import java.util.*;
 
 
 public class Position {
-	private static int defaultPeriod = 360;
+	private static int DefaultPeriod = 300;
 	private Log log;
 	private SMS sms;
 	private GPS gps;
@@ -43,6 +43,7 @@ public class Position {
 	}
 
 	private void run(TrackPoint lastPosition, TrackPoint position) {
+		if (position.distance(lastPosition) == 0) return;
 		int timespan = (int) ((position.getTimestamp() - lastPosition.getTimestamp()) / 1000);
 		int estimate = (int) (position.distance(Portage.DW[target]) / position.distance(lastPosition) * timespan);
 		int next = Portage.nextPortage(position);
@@ -51,7 +52,7 @@ public class Position {
 		if (next > target) {
 			sms.send(position.distanceKm(Portage.DW[target]) + " km after " + Portage.DW[target].name, position);
 			while (nextTarget() && next > target);
-		} else if (estimate - 2 <= timespan / 2) {
+		} else if (estimate - 2 <= timespan / 2 && period < DefaultPeriod) {
 			sms.send(position.distanceKm(Portage.DW[target]) + " km before " + Portage.DW[target].name, position);
 			nextTarget();
 		} else if (estimate / 2 < period) {
@@ -74,12 +75,13 @@ public class Position {
 			return nextTarget();
 		}
 		target = next;
-		period = defaultPeriod;
+		period = DefaultPeriod;
 		return true;
 	}
 
 	private void sleep() {
 		try {
+			log.log("Sleeping for " + period + " seconds");
 			Thread.sleep(period * 1000L);
 		} catch (Exception e) {
 			log.log("Error: Could not sleep");
