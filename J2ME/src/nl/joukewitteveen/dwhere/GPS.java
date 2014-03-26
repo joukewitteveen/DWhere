@@ -11,9 +11,9 @@ public class GPS {
 		log = _log;
 		try {
 			lp = LocationProvider.getInstance(null);
-			log.log("Instantiated location provider");
 			// Enforce permission
 			getPosition();
+			log.log("Instantiated location provider");
 		} catch (Exception e) {
 			log.log("Error: No location provider");
 			log.log("> " + e.getMessage());

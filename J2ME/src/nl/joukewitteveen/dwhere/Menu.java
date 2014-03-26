@@ -5,7 +5,8 @@ import javax.microedition.lcdui.*;
 import javax.microedition.midlet.*;
 
 
-public class Menu extends MIDlet implements ItemStateListener, CommandListener {
+public class Menu extends MIDlet implements Runnable, CommandListener, ItemStateListener {
+	private static final int FixedItems = 2;
 	private Display display;
 	private Form menu;
 	private TextField recipients;
@@ -13,6 +14,7 @@ public class Menu extends MIDlet implements ItemStateListener, CommandListener {
 	private TextField delay;
 	private TextField interval;
 	private TextField locks;
+	private Log log;
 
 	public Menu() {
 		display = Display.getDisplay(this);
@@ -44,20 +46,7 @@ public class Menu extends MIDlet implements ItemStateListener, CommandListener {
 	protected void destroyApp(boolean unconditional) throws MIDletStateChangeException {
 	}
 
-	public void itemStateChanged(Item item) {
-		if (item != (Item) trigger) return;
-		while (menu.size() > 2) menu.delete(menu.size() - 1);
-		if (trigger.getSelectedIndex() == 0) {
-			menu.append(delay);
-			menu.append(interval);
-		} else {
-			menu.append(locks);
-		}
-	}
-
-	public void commandAction(Command cmd, Displayable form) {
-		Log log = new Log("Event log", 1000);
-		display.setCurrent(log.getDisplayable());
+	public void run() {
 		SMS sms = new SMS(log, split(recipients.getString()));
 		GPS gps = new GPS(log);
 		if (trigger.getSelectedIndex() == 0) {
@@ -66,6 +55,24 @@ public class Menu extends MIDlet implements ItemStateListener, CommandListener {
 		} else {
 			(new Position(log, sms, gps))
 				.start(split(locks.getString()));
+		}
+	}
+
+	public void commandAction(Command cmd, Displayable form) {
+		form.removeCommand(cmd);
+		log = new Log("Event log", 1000);
+		display.setCurrent(log.getDisplayable());
+		new Thread(this).start();
+	}
+
+	public void itemStateChanged(Item item) {
+		if (item != (Item) trigger) return;
+		while (menu.size() > FixedItems) menu.delete(menu.size() - 1);
+		if (trigger.getSelectedIndex() == 0) {
+			menu.append(delay);
+			menu.append(interval);
+		} else {
+			menu.append(locks);
 		}
 	}
 
