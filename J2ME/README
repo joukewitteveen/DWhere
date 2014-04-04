@@ -1,5 +1,9 @@
 This version was tested on a Samsung GT-B2710
 
+Permanent permission to send text messages and poll the location can be
+set using TkFileExplorer by removing:
+    AppEx/User/Java/Games/DWhere/appdb/settings.bin
+
 Keypad auto-locking needs to be disabled:
     Menu -> Settings -> Phone -> Keypad auto-lock -> Off
 
