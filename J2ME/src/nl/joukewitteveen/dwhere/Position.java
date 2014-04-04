@@ -16,28 +16,22 @@ public class Position {
 		log = _log;
 		sms = _sms;
 		gps = _gps;
-		target = 0;
 	}
 
 	public void start(Vector _locks) {
 		TrackPoint position, lastPosition;
 		locks = _locks.elements();
-		if (!nextTarget()) {
-			log.log("No target locks");
-			return;
-		}
 		lastPosition = gps.getPosition();
 		if (lastPosition == null) {
 			lastPosition = gps.getPosition();
 			if (lastPosition == null) return;
 		}
-		while (target > 0) {
-			sleep();
-			position = gps.getPosition();
-			if (position != null) {
-				run(lastPosition, position);
-				lastPosition = position;
-			}
+		for (nextTarget(Portage.nextPortage(lastPosition)); target > 0; lastPosition = position) {
+			do {
+				sleep();
+				position = gps.getPosition();
+			} while (position == null);
+			run(lastPosition, position);
 		}
 		log.log("Done");
 	}
@@ -50,32 +44,28 @@ public class Position {
 
 		if (next > target) {
 			sms.send(Portage.DW[target].distanceKm(position) + " km after " + Portage.DW[target].name, position);
-			while (nextTarget() && next > target);
+			nextTarget(next);
 		} else if (estimate - 2 <= timespan / 2 && period < DefaultPeriod) {
 			sms.send(Portage.DW[target].distanceKm(position) + " km before " + Portage.DW[target].name, position);
-			nextTarget();
+			nextTarget(next + 1);
 		} else if (estimate / 2 < period) {
 			period = estimate / 2;
 		}
 	}
 
-	private boolean nextTarget() {
-		if (!locks.hasMoreElements()){
-			target = -1;
-			return false;
+	private void nextTarget(int minimum) {
+		while (locks.hasMoreElements()) {
+			String lock = (String) locks.nextElement();
+			try {
+				target = Integer.parseInt(lock);
+				if (target < minimum || target >= Portage.DW.length) throw new IndexOutOfBoundsException();
+				period = DefaultPeriod;
+				return;
+			} catch (Exception e) {
+				log.log("Invalid target lock: " + lock);
+			}
 		}
-		String lock = (String) locks.nextElement();
-		int next;
-		try {
-			next = Integer.parseInt(lock);
-			if (next <= target || next >= Portage.DW.length) throw new IndexOutOfBoundsException();
-		} catch (Exception e) {
-			log.log("Invalid target lock: " + lock);
-			return nextTarget();
-		}
-		target = next;
-		period = DefaultPeriod;
-		return true;
+		target = -1;
 	}
 
 	private void sleep() {
