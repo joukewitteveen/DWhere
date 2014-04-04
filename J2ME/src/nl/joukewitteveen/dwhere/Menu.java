@@ -6,10 +6,11 @@ import javax.microedition.midlet.*;
 
 
 public class Menu extends MIDlet implements Runnable, CommandListener, ItemStateListener {
-	private static final int FixedItems = 2;
+	private static final int FixedItems = 3;
 	private Display display;
 	private Form menu;
 	private TextField recipients;
+	private ChoiceGroup link;
 	private ChoiceGroup trigger;
 	private TextField delay;
 	private TextField interval;
@@ -20,6 +21,7 @@ public class Menu extends MIDlet implements Runnable, CommandListener, ItemState
 		display = Display.getDisplay(this);
 		menu = new Form("DWhere");
 		recipients = new TextField("Recipients", null, 225, TextField.ANY);
+		link    = new ChoiceGroup("Link", Choice.POPUP, new String[]{ "google", "apple" }, new Image[]{ null, null });
 		trigger = new ChoiceGroup("Trigger", Choice.POPUP, new String[]{ "time", "position" }, new Image[]{ null, null });
 		delay    = new TextField("Delay",    null, 4,   TextField.NUMERIC);
 		interval = new TextField("Interval", null, 4,   TextField.NUMERIC);
@@ -28,6 +30,7 @@ public class Menu extends MIDlet implements Runnable, CommandListener, ItemState
 		recipients.setString("+44");
 		locks.setString("1 5 13 14 19 21 22 24 25 28 31 35 40 41 42 44 45 48 49 50 52 54 57 58 60 61 62 64 65 66 67 69 70 72 73 74 75 76 77");
 		menu.append(recipients);
+		menu.append(link);
 		menu.append(trigger);
 		menu.append(delay);
 		menu.append(interval);
@@ -47,7 +50,7 @@ public class Menu extends MIDlet implements Runnable, CommandListener, ItemState
 	}
 
 	public void run() {
-		SMS sms = new SMS(log, split(recipients.getString()));
+		SMS sms = new SMS(log, link.getString(link.getSelectedIndex()), split(recipients.getString()));
 		GPS gps = new GPS(log);
 		if (trigger.getSelectedIndex() == 0) {
 			(new Interval(log, sms, gps))

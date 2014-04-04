@@ -8,12 +8,14 @@ import javax.wireless.messaging.*;
 public class SMS {
 	private static Calendar calendar = Calendar.getInstance();
 	private Log log;
+	private String link;
 	private Vector recipients;
 	private MessageConnection conn;
 	private TextMessage text;
 
-	public SMS(Log _log, Vector _recipients) {
+	public SMS(Log _log, String _link, Vector _recipients) {
 		log = _log;
+		link = "http://maps." + _link + ".com/?q=";
 		recipients = _recipients;
 		Enumeration to = recipients.elements();
 		while(to.hasMoreElements()) {
@@ -38,8 +40,7 @@ public class SMS {
 			try {
 		        conn = (MessageConnection) Connector.open("sms://" + to.nextElement());
 		        text = (TextMessage) conn.newMessage(MessageConnection.TEXT_MESSAGE);
-		        text.setPayloadText(msg +
-		        		" \nhttp://maps.google.com/?q=" + fiveDecimals(pos.getLatitude()) + "," + fiveDecimals(pos.getLongitude()));
+		        text.setPayloadText(msg + "\n" + link + fiveDecimals(pos.getLatitude()) + "," + fiveDecimals(pos.getLongitude()));
 		        conn.send(text);
 		        conn.close();
 		    } catch (Exception e) {
