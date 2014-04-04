@@ -47,13 +47,12 @@ public class Position {
 		int timespan = (int) ((position.getTimestamp() - lastPosition.getTimestamp()) / 1000);
 		int estimate = (int) (position.distance(Portage.DW[target]) / position.distance(lastPosition) * timespan);
 		int next = Portage.nextPortage(position);
-		if (next == -1) next = Portage.DW.length;
 
 		if (next > target) {
-			sms.send(position.distanceKm(Portage.DW[target]) + " km after " + Portage.DW[target].name, position);
+			sms.send(Portage.DW[target].distanceKm(position) + " km after " + Portage.DW[target].name, position);
 			while (nextTarget() && next > target);
 		} else if (estimate - 2 <= timespan / 2 && period < DefaultPeriod) {
-			sms.send(position.distanceKm(Portage.DW[target]) + " km before " + Portage.DW[target].name, position);
+			sms.send(Portage.DW[target].distanceKm(position) + " km before " + Portage.DW[target].name, position);
 			nextTarget();
 		} else if (estimate / 2 < period) {
 			period = estimate / 2;

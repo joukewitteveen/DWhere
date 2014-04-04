@@ -25,10 +25,10 @@ public class Interval extends TimerTask {
 			if (pos == null) return;
 		}
 		int next = Portage.nextPortage(pos);
-		if (next == -1) {
+		if (next == Portage.DW.length) {
 			log.log("Error: Position beyond the finish");
 			return;
 		}
-		sms.send(pos.distanceKm(Portage.DW[next]) + " km before " + Portage.DW[next].name, pos);
+		sms.send(Portage.DW[next].distanceKm(pos) + " km before " + Portage.DW[next].name, pos);
 	}
 }

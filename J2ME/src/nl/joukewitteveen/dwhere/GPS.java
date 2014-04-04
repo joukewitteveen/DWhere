@@ -47,10 +47,6 @@ class TrackPoint extends Coordinates {
 	public long getTimestamp() {
 		return timestamp;
 	}
-
-	public float distanceKm(Coordinates to) {
-		return ((int) (this.distance(to) / 10F + 0.5F)) / 100F;
-	}
 }
 
 
@@ -62,6 +58,10 @@ class Portage extends Coordinates {
 		name = _name;
 	}
 
+	public float distanceKm(Coordinates to) {
+		return ((int) (this.distance(to) / 10F + 0.5F)) / 100F;
+	}
+
 	public static int nextPortage(Coordinates pos) {
 		double lat = pos.getLatitude(),
 			   lon = pos.getLongitude();
@@ -69,7 +69,6 @@ class Portage extends Coordinates {
 		for (i = 1; i < DW.length; i++) {
 			if (DW[i].getLongitude() >= lon) break;
 		}
-		if (i == DW.length) return -1;
 		switch (i) {
 		case 56:	// Blake's weir
 			if (lat < DW[55].getLatitude()) i = 55;
