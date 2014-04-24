@@ -64,7 +64,7 @@ class Portage extends Coordinates {
 
 	public static int nextPortage(Coordinates pos) {
 		double lat = pos.getLatitude(),
-			   lon = pos.getLongitude();
+		       lon = pos.getLongitude();
 		int i;
 		for (i = 1; i < DW.length; i++) {
 			if (DW[i].getLongitude() >= lon) break;

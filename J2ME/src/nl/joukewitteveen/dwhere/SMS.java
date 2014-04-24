@@ -20,12 +20,12 @@ public class SMS {
 		Enumeration to = recipients.elements();
 		while(to.hasMoreElements()) {
 			try {
-		        conn = (MessageConnection) Connector.open("sms://" + to.nextElement());
-		        text = (TextMessage) conn.newMessage(MessageConnection.TEXT_MESSAGE);
-		        text.setPayloadText("DWhere subscription started");
-		        conn.send(text);
-		        conn.close();
-		    } catch (Exception e) {
+				conn = (MessageConnection) Connector.open("sms://" + to.nextElement());
+				text = (TextMessage) conn.newMessage(MessageConnection.TEXT_MESSAGE);
+				text.setPayloadText("DWhere subscription started");
+				conn.send(text);
+				conn.close();
+			} catch (Exception e) {
 				log.log("Error: Could not send text");
 				log.log("> " + e.getMessage());
 			}
@@ -38,12 +38,12 @@ public class SMS {
 		msg = calendar.get(Calendar.HOUR_OF_DAY) + ":" + twoDigits(calendar.get(Calendar.MINUTE)) + " - " + msg;
 		while(to.hasMoreElements()) {
 			try {
-		        conn = (MessageConnection) Connector.open("sms://" + to.nextElement());
-		        text = (TextMessage) conn.newMessage(MessageConnection.TEXT_MESSAGE);
-		        text.setPayloadText(msg + "\n" + link + fiveDecimals(pos.getLatitude()) + "," + fiveDecimals(pos.getLongitude()));
-		        conn.send(text);
-		        conn.close();
-		    } catch (Exception e) {
+				conn = (MessageConnection) Connector.open("sms://" + to.nextElement());
+				text = (TextMessage) conn.newMessage(MessageConnection.TEXT_MESSAGE);
+				text.setPayloadText(msg + "\n" + link + fiveDecimals(pos.getLatitude()) + "," + fiveDecimals(pos.getLongitude()));
+				conn.send(text);
+				conn.close();
+			} catch (Exception e) {
 				log.log("Error: Could not send text");
 				log.log("> " + e.getMessage());
 			}
